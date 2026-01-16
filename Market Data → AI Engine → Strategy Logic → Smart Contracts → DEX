@@ -1,0 +1,29 @@
+
+---
+
+## Simple Coding Example
+
+### AI Strategy Engine (Pseudo Code)
+
+```python
+class TradingStrategy:
+    def __init__(self, risk_level):
+        self.risk_level = risk_level
+
+    def analyze_market(self, market_data):
+        signal = self.ai_model(market_data)
+        return signal
+
+    def ai_model(self, data):
+        if data["trend"] == "bullish" and data["volume"] > threshold:
+            return "BUY"
+        elif data["trend"] == "bearish":
+            return "SELL"
+        return "HOLD"
+
+    def execute(self, signal):
+        if signal == "BUY":
+            return "Execute Buy Order"
+        elif signal == "SELL":
+            return "Execute Sell Order"
+        return "No Action"
